@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../assets/fonts/Shrikhand-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  text-align: center;
+  font-family: Roboto, sans-serif;
+}
+
+header .logo {
+  padding: 14px 0px 8px;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+header form .location {
+  height: 50px;
+  background-color: #eaeaea;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+header form input {
+  border: none;
+  background-color: #eaeaea;
+}/*# sourceMappingURL=index.css.map */
