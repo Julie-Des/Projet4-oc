@@ -1,10 +1,8 @@
 @font-face {
-  font-family: "Shrikhand";
-  src: url(../assets/fonts/Shrikhand-Regular.ttf);
+  font-family: "Shrikhand", sans-serif;
 }
 @font-face {
-  font-family: "Roboto";
-  src: url(../assets/fonts/Roboto-Regular.ttf);
+  font-family: "Roboto", sans-serif;
 }
 * {
   margin: 0;
@@ -26,16 +24,101 @@ body {
 
 header .logo {
   padding: 14px 0px 8px;
-  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
-          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
-header form .location {
+
+.location {
   height: 50px;
   background-color: #eaeaea;
-  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  -webkit-box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+          box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-header form input {
+.location input {
   border: none;
+  outline: none;
   background-color: #eaeaea;
+  color: #353535;
+  text-align: center;
+  width: 109px;
+  margin-left: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.location input::-webkit-input-placeholder {
+  color: #353535;
+}
+.location input::-moz-placeholder {
+  color: #353535;
+}
+.location input:-ms-input-placeholder {
+  color: #353535;
+}
+.location input::-ms-input-placeholder {
+  color: #353535;
+}
+.location input::placeholder {
+  color: #353535;
+}
+.location .fa-location-dot {
+  color: #353535;
+}
+
+.intro {
+  background-color: #F6F6F6;
+  -webkit-box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+          box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+.intro h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.intro p {
+  font-weight: 300;
+  font-size: 1.125rem;
+  color: #353535;
+}
+.intro a {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+          box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  border: none;
+  color: #FFFFFF;
+  border-radius: 25px;
+  padding: 15px 22px;
+}
+.intro a:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+  -webkit-transform: translateX(-0.5px);
+          transform: translateX(-0.5px);
 }/*# sourceMappingURL=index.css.map */
