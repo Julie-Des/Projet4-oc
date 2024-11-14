@@ -1,0 +1,28 @@
+.functioning {
+    padding: 60px 20px;
+
+    h2 {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    ul {
+        @include childcenter;
+        flex-direction: column;
+        gap: 25px;
+
+        li {
+            background-color: $grey-background;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px 0px #00000026;
+            padding: 30px 50px 30px 20px;
+            display: grid;
+            grid-template-columns: 10% 75%;
+            min-width: 322px;
+            @include font1;
+
+
+        }
+    }
+
+}
