@@ -1,6 +1,6 @@
 .intro {
     background-color: $grey-background;
-    box-shadow: 0px -4px 4px 0px #00000040;
+    box-shadow: inset 0px 4px 4px 0px #00000040;
     @include childcenter;
     flex-direction: column;
     flex-wrap: wrap;

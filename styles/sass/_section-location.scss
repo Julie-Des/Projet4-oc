@@ -1,7 +1,7 @@
 .location {
     height: 50px;
     background-color: $grey-location;
-    box-shadow: 0px -2px 4px 0px #00000026;
+    box-shadow: inset 0px 2px 4px 0px #00000026;
     @include childcenter;
 
     input {
