@@ -18,9 +18,9 @@
         background-color: $grey-location;
         color: $grey-text;
         text-align: center;
-        width: 109px;
+        width: 50%;
         margin-left: 20px;
-        @include font1;
+        @include font500;
         &::placeholder {
             color: $grey-text;
         }

@@ -17,6 +17,7 @@ $white: #FFFFFF;
 $grey-location: #eaeaea;
 $grey-background: #F6F6F6;
 $grey-text:#353535;
+$grey-icone: #7E7E7E;
 
 * {
     margin: 0;
@@ -36,7 +37,7 @@ body {
     font-family: $font-main;
 }
 
-@mixin font1 {
+@mixin font500 {
     font-size: 1rem;
     font-weight: 500;
 }
