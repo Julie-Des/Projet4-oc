@@ -15,6 +15,7 @@ li {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -195,4 +196,88 @@ header .logo {
 }
 .functioning ul li:nth-child(3) i {
   color: #9356DC;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  padding: 60px 20px;
+}
+.restaurants h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.restaurants .restaurants-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+.restaurants .restaurants-card a {
+  width: 100%;
+}
+.restaurants .restaurants-card a .card {
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+}
+.restaurants .restaurants-card a .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 175px;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.restaurants .restaurants-card a .card span {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #008766;
+  background-color: #99E2D0;
+  padding: 7px 9px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.restaurants .restaurants-card a .card .card-content {
+  text-align: left;
+  padding: 13px;
+  position: relative;
+}
+.restaurants .restaurants-card a .card .card-content h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.restaurants .restaurants-card a .card .card-content p {
+  font-size: 1.063rem;
+  font-weight: 300;
+}
+.restaurants .restaurants-card a .card .card-content .fa-heart {
+  position: absolute;
+  bottom: 50%;
+  right: 5%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  font-size: 21px;
+}
+.restaurants .restaurants-card a .card .card-content .fa-heart-full {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  z-index: 10;
+}
+.restaurants .restaurants-card a .card .card-content .fa-heart-full:hover {
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }/*# sourceMappingURL=index.css.map */
