@@ -1,0 +1,35 @@
+footer {
+    padding: 22px 25px;
+    text-align: left;
+    background-color: $dark-grey;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h4 {
+        @include fontshrikhand-footer;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        li {
+            @include font500;
+            &:nth-child(-n + 2) {
+            display: grid;
+            grid-template-columns: 12px 240px;
+            align-items: center;
+            gap: 10px;
+            }
+            .fa-utensils {
+                font-size: 0.8rem;
+            }
+            .fa-handshake-angle {
+                font-size: 0.62rem;
+            }
+        }
+    }
+}

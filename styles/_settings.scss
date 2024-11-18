@@ -9,16 +9,15 @@ $font-title: Shrikhand, sans-serif;
 $font-main: Roboto, sans-serif;
 $purple: #9356DC;
 $pink: #FF79DA;
-$button-gradient: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-$heart-gradient: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+$gradient: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 $navy-blue: #003A68;
 $light-blue: #89C8FA;
 $dark-green: #008766;
 $ligth-green: #99E2D0;
 $white: #FFFFFF;
+$dark-grey: #353535;
 $grey-location: #eaeaea;
 $grey-background: #F6F6F6;
-$grey-text:#353535;
 $grey-icone: #7E7E7E;
 
 * {
@@ -45,9 +44,14 @@ body {
     font-weight: 500;
 }
 
-@mixin font-title {
+@mixin font700 {
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+@mixin fontshrikhand-footer {
+    font-family: $font-title;
+    font-size: 1.125rem;
 }
 
 @mixin childcenter {
@@ -57,7 +61,7 @@ body {
 }
 
 @mixin button-cta {
-    background: $button-gradient;
+    background: $gradient;
     box-shadow: 0px 4px 10px 0px #00000040;
     border: none;
     color: $white;

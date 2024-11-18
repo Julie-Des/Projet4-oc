@@ -16,17 +16,17 @@
         border: none;
         outline: none;
         background-color: $grey-location;
-        color: $grey-text;
+        color: $dark-grey;
         text-align: center;
         width: 50%;
         margin-left: 20px;
         @include font500;
         &::placeholder {
-            color: $grey-text;
+            color: $dark-grey;
         }
     }
 
     .fa-location-dot {
-        color:$grey-text;
+        color:$dark-grey;
     }
 }

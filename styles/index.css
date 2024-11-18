@@ -272,7 +272,8 @@ header .logo {
 .restaurants .restaurants-card a .card .card-content .fa-heart-full {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+          background-clip: text;
+  color: transparent;
   opacity: 0;
   z-index: 10;
 }
@@ -280,4 +281,51 @@ header .logo {
   opacity: 1;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+footer {
+  padding: 22px 25px;
+  text-align: left;
+  background-color: #353535;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+footer h4 {
+  font-family: Shrikhand, sans-serif;
+  font-size: 1.125rem;
+}
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7px;
+}
+footer ul li {
+  font-size: 1rem;
+  font-weight: 500;
+}
+footer ul li:nth-child(-n+2) {
+  display: grid;
+  grid-template-columns: 12px 240px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+footer ul li .fa-utensils {
+  font-size: 0.8rem;
+}
+footer ul li .fa-handshake-angle {
+  font-size: 0.62rem;
 }/*# sourceMappingURL=index.css.map */

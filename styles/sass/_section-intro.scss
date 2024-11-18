@@ -16,13 +16,13 @@
     }
 
     h1 {
-        @include font-title;
+        @include font700;
     }
 
     p {
         font-weight: 300;
         font-size: 1.125rem;
-        color: $grey-text;
+        color: $dark-grey;
     }
 
     a {
