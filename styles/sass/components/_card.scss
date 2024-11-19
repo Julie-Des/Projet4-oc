@@ -1,0 +1,60 @@
+.card {
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+
+    img {
+        object-fit: cover;
+        height: 175px;
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    span {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: $dark-green;
+        background-color: $ligth-green;
+        padding: 7px 9px;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+    .card__content {
+        text-align: left;
+        padding: 13px;
+        position: relative;
+
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.063rem;
+            font-weight: 300;
+        }
+
+        .fa-heart {
+            position: absolute;
+            bottom: 50%;
+            right: 5%;
+            transform: translateY(50%);
+            font-size: 21px;
+        }
+
+        .fa-heart-full {
+            background: $gradient;
+            background-clip: text;
+            color: transparent;
+            opacity: 0;
+            z-index: 10;
+
+            &:hover {
+                opacity: 1;
+                transition: 0.3s;
+            }
+        }
+    }
+}

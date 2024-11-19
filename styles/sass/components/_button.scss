@@ -1,0 +1,15 @@
+@mixin button {
+    background: $gradient;
+    box-shadow: 0px 4px 10px 0px #00000040;
+    border: none;
+    color: $white;
+    border-radius: 25px;
+    padding: 15px 22px;
+    
+    &:hover {
+        filter: brightness(1.1);
+        transition: 0.3s ease-out;
+        box-shadow: 0px 4px 15px 0px #00000059;
+        transform: translateX(-0.5px);
+    }
+}

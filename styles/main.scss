@@ -1,7 +1,13 @@
-@import "./settings";
-@import "./sass/header";
-@import "./sass/section-location";
-@import "./sass/section-intro";
-@import "./sass/functioning";
-@import "./sass/restaurants";
-@import "./sass/footer";
+@import "./sass/utils/variables";
+@import "./sass/utils/mixins";
+
+@import "./sass/base/base";
+
+@import "./sass/components/button";
+@import "./sass/components/functioning-steps";
+@import "./sass/components/card";
+
+@import "./sass/layouts/header";
+@import "./sass/layouts/footer";
+
+@import "./sass/pages/home";

@@ -1,0 +1,104 @@
+// Section location
+.location {
+    height: 50px;
+    background-color: $grey-location;
+    @include childcenter;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        top: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 2px);
+    }
+
+    &__input {
+        border: none;
+        outline: none;
+        background-color: $grey-location;
+        color: $dark-grey;
+        text-align: center;
+        width: 50%;
+        margin-left: 20px;
+        @include font500;
+        &::placeholder {
+            color: $dark-grey;
+        }
+    }
+
+    &__icon {
+        color:$dark-grey;
+    }
+}
+
+// Section intro
+.intro {
+    background-color: $light-grey;
+    @include childcenter;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding : 50px 30px 60px 30px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: 4px;
+        width: 100%;
+        top: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 4px);
+    }
+
+    &__title {
+        @include font700;
+    }
+
+    &__content {
+        font-weight: 300;
+        font-size: 1.125rem;
+        color: $dark-grey;
+    }
+
+    &__link {
+        @include button;
+    }
+}
+
+// Section functioning
+.functioning {
+    padding: 60px 20px;
+
+    &__title {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        @include childcenter;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+// Section restaurants
+.restaurants {
+    background-color: $light-grey;
+    padding: 60px 20px;
+
+    &__title {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    &__card {
+       @include childcenter;
+       flex-direction: column;
+       gap: 15px;
+       
+       a {
+        width: 100%;
+       }
+    }
+}
