@@ -1,11 +1,13 @@
 .restaurants {
     background-color: $grey-background;
     padding: 60px 20px;
-    h2 {
+
+    &__title {
         text-align: left;
         margin-bottom: 20px;
     }
-    .restaurants-card {
+
+    &__card {
        @include childcenter;
        flex-direction: column;
        gap: 15px;
@@ -19,11 +21,11 @@
                 position: relative;
 
                 img {
-                object-fit: cover;
-                height: 175px;
-                width: 100%;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
+                    object-fit: cover;
+                    height: 175px;
+                    width: 100%;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
                 }
 
                 span {
@@ -74,7 +76,6 @@
                 }
             }
         }
-    }
-        
+    }      
 }
 

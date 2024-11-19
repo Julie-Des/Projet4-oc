@@ -1,12 +1,12 @@
 .functioning {
     padding: 60px 20px;
 
-    h2 {
+    &__title {
         text-align: left;
         margin-bottom: 30px;
     }
 
-    ul {
+    &__list {
         @include childcenter;
         flex-direction: column;
         gap: 25px;
@@ -19,11 +19,14 @@
             display: grid;
             grid-template-columns: 10% 90%;
             align-items: center;
+            justify-items: start;
             gap: 10px;
-            max-width: 335px;
+            width: 100%;
+            max-width: 322.5px;
             box-sizing: border-box;
             position: relative;
             @include font500;
+
             span {
                 position: absolute;
                 background-color: $purple;
@@ -35,6 +38,7 @@
                 left: -12px;
                 transform: translateY(50%);
             }
+
             i {
                 color: $grey-icone;
             }

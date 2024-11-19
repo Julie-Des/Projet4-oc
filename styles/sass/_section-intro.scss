@@ -6,6 +6,7 @@
     gap: 30px;
     padding : 50px 30px 60px 30px;
     position: relative;
+
     &::before {
         position: absolute;
         content: "";
@@ -15,17 +16,17 @@
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 4px);
     }
 
-    h1 {
+    &__title {
         @include font700;
     }
 
-    p {
+    &__content {
         font-weight: 300;
         font-size: 1.125rem;
         color: $dark-grey;
     }
 
-    a {
+    &__link {
         @include button-cta;
     }
 }
