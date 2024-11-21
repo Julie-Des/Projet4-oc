@@ -19,9 +19,6 @@ body {
 
 .functioning__list li {
   background-color: #F6F6F6;
-  border-radius: 20px;
-  -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
-          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   padding: 25px 40px 25px 30px;
   display: grid;
   grid-template-columns: 10% 90%;
@@ -30,21 +27,25 @@ body {
           align-items: center;
   justify-items: start;
   gap: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   width: 100%;
   max-width: 322.5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-  font-size: 1rem;
-  font-weight: 500;
 }
 .functioning__list li span {
-  position: absolute;
   background-color: #9356DC;
-  font-size: 0.89rem;
-  border-radius: 25px;
   padding: 3px 8px 3px;
+  font-size: 0.89rem;
+  font-weight: 500;
+  border-radius: 25px;
   color: #FFFFFF;
+  position: absolute;
   bottom: 50%;
   left: -12px;
   -webkit-transform: translateY(50%);
@@ -53,7 +54,7 @@ body {
 .functioning__list li i {
   color: #7E7E7E;
 }
-.functioning__list:nth-child(3) i {
+.functioning__list li:nth-child(3) i {
   color: #9356DC;
 }
 
@@ -71,29 +72,30 @@ body {
   border-top-right-radius: 15px;
 }
 .card span {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  color: #008766;
   background-color: #99E2D0;
   padding: 7px 9px;
   font-size: 0.875rem;
   font-weight: 500;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #008766;
 }
-.card .card__content {
+.card__content {
   text-align: left;
   padding: 13px;
   position: relative;
 }
-.card .card__content h3 {
+.card__content h3 {
   font-size: 1.125rem;
   font-weight: 700;
 }
-.card .card__content p {
+.card__content p {
   font-size: 1.063rem;
   font-weight: 300;
 }
-.card .card__content .fa-heart {
+
+.fa-heart {
   position: absolute;
   bottom: 50%;
   right: 5%;
@@ -101,7 +103,8 @@ body {
           transform: translateY(50%);
   font-size: 21px;
 }
-.card .card__content .fa-heart-full {
+
+.fa-heart-full {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
           background-clip: text;
@@ -109,7 +112,7 @@ body {
   opacity: 0;
   z-index: 10;
 }
-.card .card__content .fa-heart-full:hover {
+.fa-heart-full:hover {
   opacity: 1;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -120,10 +123,8 @@ header .logo {
 }
 
 footer {
-  padding: 22px 25px;
-  text-align: left;
   background-color: #353535;
-  color: #FFFFFF;
+  padding: 22px 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,7 +132,11 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 16px;
+  text-align: left;
+  color: #FFFFFF;
 }
 footer h4 {
   font-family: Shrikhand, sans-serif;
@@ -145,6 +150,8 @@ footer ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 7px;
 }
 footer ul li {
@@ -153,11 +160,12 @@ footer ul li {
 }
 footer ul li:nth-child(-n+2) {
   display: grid;
-  grid-template-columns: 12px 240px;
+  grid-template-columns: 3% 97%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  justify-items: start;
+  gap: 12px;
 }
 footer ul li .fa-utensils {
   font-size: 0.8rem;
@@ -167,17 +175,17 @@ footer ul li .fa-handshake-angle {
 }
 
 .location {
-  height: 50px;
-  background-color: #eaeaea;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  background-color: #eaeaea;
   position: relative;
 }
 .location::before {
@@ -189,6 +197,8 @@ footer ul li .fa-handshake-angle {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 2px);
 }
 .location__input {
+  font-size: 1rem;
+  font-weight: 500;
   border: none;
   outline: none;
   background-color: #eaeaea;
@@ -196,8 +206,6 @@ footer ul li .fa-handshake-angle {
   text-align: center;
   width: 50%;
   margin-left: 20px;
-  font-size: 1rem;
-  font-weight: 500;
 }
 .location__input::-webkit-input-placeholder {
   color: #353535;
@@ -220,15 +228,16 @@ footer ul li .fa-handshake-angle {
 
 .intro {
   background-color: #F6F6F6;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding: 50px 30px 60px 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -236,7 +245,6 @@ footer ul li .fa-handshake-angle {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
-  padding: 50px 30px 60px 30px;
   position: relative;
 }
 .intro::before {
@@ -252,8 +260,8 @@ footer ul li .fa-handshake-angle {
   font-weight: 700;
 }
 .intro__content {
-  font-weight: 300;
   font-size: 1.125rem;
+  font-weight: 300;
   color: #353535;
 }
 .intro__link {
@@ -284,19 +292,21 @@ footer ul li .fa-handshake-angle {
   margin-bottom: 30px;
 }
 .functioning__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 25px;
 }
 
@@ -309,19 +319,21 @@ footer ul li .fa-handshake-angle {
   margin-bottom: 20px;
 }
 .restaurants__card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 15px;
 }
 .restaurants__card a {

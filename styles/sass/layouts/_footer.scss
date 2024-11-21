@@ -1,29 +1,23 @@
 footer {
-    padding: 22px 25px;
+    @include background-padding($dark-grey, 22px 25px);
+    @include flex-column(16px);
     text-align: left;
-    background-color: $dark-grey;
     color: $white;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
 
     h4 {
         @include fontshrikhand-footer;
     }
 
     ul {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
+        @include flex-column(7px);
 
         li {
-            @include font500;
+            @include size-weight(1rem, 500);
+
             &:nth-child(-n + 2) {
-            display: grid;
-            grid-template-columns: 12px 240px;
-            align-items: center;
-            gap: 10px;
+                @include grid-column(3% 97%, 12px);
             }
+
             .fa-utensils {
                 font-size: 0.8rem;
             }

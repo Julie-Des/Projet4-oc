@@ -1,11 +1,20 @@
-@mixin font500 {
-    font-size: 1rem;
-    font-weight: 500;
+@mixin size-weight($font-size, $font-weight) {
+    font-size: $font-size;
+    font-weight: $font-weight;
 }
 
-@mixin font700 {
-    font-size: 1.5rem;
-    font-weight: 700;
+@mixin background-padding($background, $padding) {
+    background-color: $background;
+    padding: $padding;
+}
+
+@mixin shadow-before($height, $background) {
+    position: absolute;
+    content: "";
+    height: $height;
+    width: 100%;
+    top: 0;
+    background: $background;
 }
 
 @mixin fontshrikhand-footer {
@@ -14,7 +23,22 @@
 }
 
 @mixin childcenter {
-    display:flex;
     align-items: center;
     justify-content: center;
 }
+
+@mixin flex-column($gap) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: $gap;
+}
+
+@mixin grid-column($gtc, $gap) {
+    display: grid;
+    grid-template-columns: $gtc;
+    align-items: center;
+    justify-items: start;
+    gap: $gap;
+}
+
