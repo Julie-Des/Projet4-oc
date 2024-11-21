@@ -8,6 +8,10 @@
     
     &::before {
         @include shadow-before(2px, $shadow-thin);
+
+        @media (min-width: 767px) {
+        display: none;
+        }
     }
 
     &__input {
@@ -39,6 +43,10 @@
 
     &::before {
         @include shadow-before(4px, $shadow-thick);
+
+        @media screen and (min-width: 767px) {
+            display: none;
+            }
     }
 
     &__title {
@@ -67,6 +75,18 @@
     &__list {
         @include childcenter;
         @include flex-column(25px);
+
+        @media (min-width:1024px) {
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+    }
+
+    @media (min-width:767px) {
+        padding: 60px 60px;
+    }
+    @media (min-width:1024px) {
+        padding: 60px 130px;
     }
 }
 
@@ -82,9 +102,28 @@
     &__card {
        @include childcenter;
        @include flex-column(15px);
+
+       @media (min-width:767px) {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 30px;
+       }
+
        
        a {
         width: 100%;
+
+        @media (min-width:767px) {
+            width: 45%;
+        }
        }
+    }
+
+    @media (min-width:767px) {
+        padding: 60px 60px;
+    }
+
+    @media (min-width:1024px) {
+        padding: 60px 130px;
     }
 }

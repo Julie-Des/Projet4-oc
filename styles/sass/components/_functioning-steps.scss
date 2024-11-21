@@ -1,7 +1,7 @@
 .functioning__list {
     li {
-        @include background-padding($light-grey, 25px 40px 25px 30px);
-        @include grid-column(10% 90%, 10px);
+        @include background-padding($light-grey, 25px 25px 25px 30px);
+        @include grid-column(10% 98%, 10px);
         @include size-weight(1rem, 500);
         border-radius: 20px;
         box-shadow: $shadow-functioning;

@@ -104,9 +104,9 @@ main {
 
 .functioning__list li {
   background-color: #F6F6F6;
-  padding: 25px 40px 25px 30px;
+  padding: 25px 25px 25px 30px;
   display: grid;
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 10% 98%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -155,6 +155,11 @@ main {
   width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+@media (min-width: 1024px) {
+  .card img {
+    height: 130px;
+  }
 }
 .card span {
   background-color: #99E2D0;
@@ -281,6 +286,11 @@ footer ul li .fa-handshake-angle {
   top: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 2px);
 }
+@media (min-width: 767px) {
+  .location::before {
+    display: none;
+  }
+}
 .location__input {
   font-size: 1rem;
   font-weight: 500;
@@ -340,6 +350,11 @@ footer ul li .fa-handshake-angle {
   top: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 4px);
 }
+@media screen and (min-width: 767px) {
+  .intro::before {
+    display: none;
+  }
+}
 .intro__title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -394,6 +409,26 @@ footer ul li .fa-handshake-angle {
       flex-wrap: wrap;
   gap: 25px;
 }
+@media (min-width: 1024px) {
+  .functioning__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+@media (min-width: 767px) {
+  .functioning {
+    padding: 60px 60px;
+  }
+}
+@media (min-width: 1024px) {
+  .functioning {
+    padding: 60px 130px;
+  }
+}
 
 .restaurants {
   background-color: #F6F6F6;
@@ -421,6 +456,33 @@ footer ul li .fa-handshake-angle {
       flex-wrap: wrap;
   gap: 15px;
 }
+@media (min-width: 767px) {
+  .restaurants__card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 30px;
+  }
+}
 .restaurants__card a {
   width: 100%;
+}
+@media (min-width: 767px) {
+  .restaurants__card a {
+    width: 45%;
+  }
+}
+@media (min-width: 767px) {
+  .restaurants {
+    padding: 60px 60px;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurants {
+    padding: 60px 130px;
+  }
 }/*# sourceMappingURL=main.css.map */

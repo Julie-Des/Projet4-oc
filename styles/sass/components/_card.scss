@@ -9,6 +9,10 @@
         width: 100%;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
+
+        @media (min-width:1024px) {
+            height: 130px;
+        }
     }
 
     span {
@@ -33,4 +37,6 @@
             @include size-weight(1.063rem, 300);
         }  
     }
+
+    
 }
