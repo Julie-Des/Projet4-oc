@@ -76,14 +76,16 @@
         @include childcenter;
         @include flex-column(25px);
 
-        @media (min-width:1024px) {
+        @media (min-width:767px) {
             flex-direction: row;
             flex-wrap: nowrap;
+            justify-content: space-between;
+        
         }
     }
 
     @media (min-width:767px) {
-        padding: 60px 60px;
+        padding: 50px;
     }
     @media (min-width:1024px) {
         padding: 60px 130px;
@@ -108,7 +110,6 @@
             justify-content: space-between;
             gap: 30px;
        }
-
        
        a {
         width: 100%;
@@ -120,7 +121,7 @@
     }
 
     @media (min-width:767px) {
-        padding: 60px 60px;
+        padding: 50px;
     }
 
     @media (min-width:1024px) {

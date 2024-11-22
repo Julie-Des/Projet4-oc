@@ -5,7 +5,7 @@ footer {
     color: $white;
 
     h4 {
-        @include fontshrikhand-footer;
+        @include fontshrikhand(1.125rem);
     }
 
     ul {
@@ -25,5 +25,17 @@ footer {
                 font-size: 0.62rem;
             }
         }
+
+        @media (min-width:767px) {
+            flex-direction: row;
+        }
+    }
+
+    @media (min-width:767px) {
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-top: 30px;
+        padding-right: 50px;
+        gap: 70px;
     }
 }

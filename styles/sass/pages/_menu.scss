@@ -1,0 +1,36 @@
+// Section cover
+.cover {
+    height: 45vh;
+    &__image {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+// Section menu
+.menu {
+    @include background-padding($light-grey, 35px 12px 40px 12px);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    transform: translateY(-40px);
+    margin-bottom: -40px;
+
+    &__title {
+        position: relative;
+    }
+
+    h1 {
+        @include fontshrikhand(1.75rem);
+        text-align: left;
+    }
+
+    .fa-heart {
+        position: absolute;
+        top: 4%;
+        right: 8%;
+        transform: translateY(50%);
+        font-size: 21px;
+    }
+}
+

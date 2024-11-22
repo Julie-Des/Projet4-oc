@@ -17,9 +17,10 @@
     background: $background;
 }
 
-@mixin fontshrikhand-footer {
+@mixin fontshrikhand($size) {
     font-family: $font-title;
-    font-size: 1.125rem;
+    font-size: $size;
+    font-weight: 400;
 }
 
 @mixin childcenter {

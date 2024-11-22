@@ -30,5 +30,13 @@
                 color: $purple;
             }
         }  
+        
+        @media (min-width:767px) {
+            font-size: 0.83rem;
+        }
+
+        @media (min-width:1024px) {
+            font-size: 1rem;
+        }
     }
 }
