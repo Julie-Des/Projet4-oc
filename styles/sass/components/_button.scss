@@ -1,10 +1,10 @@
-@mixin button {
+@mixin button($padding) {
     background: $gradient;
     box-shadow: $shadow-button;
     border: none;
     color: $white;
     border-radius: 25px;
-    padding: 15px 22px;
+    padding: $padding;
     
     &:hover {
         filter: brightness(1.1);

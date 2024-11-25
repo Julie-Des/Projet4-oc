@@ -4,11 +4,10 @@
     position: relative;
 
     img {
+        @include radius-top(15px);
         object-fit: cover;
         height: 175px;
         width: 100%;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
 
         @media (min-width:1024px) {
             height: 130px;

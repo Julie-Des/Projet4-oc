@@ -1,0 +1,44 @@
+.menu__dishes {
+     @include flex-column(12px);
+    margin-bottom: 40px;
+    text-align: left;
+
+    h2 {
+        @include size-weight(1rem, 300);
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        position: relative;
+
+    &::before {
+        @include height-width(3px, 40px);
+        position: absolute;
+        content: "";
+        bottom: -8px;
+        background: $ligth-green;
+        }
+    }
+
+    .dishes {
+        @include background-padding($white, 10px);
+        display: flex;
+        justify-content: space-between;
+        border-radius: 15px;
+
+        &__content {
+            @include flex-column(5px);
+        
+            h3 {
+                @include size-weight(1.125rem, 500);
+            }
+
+            p {
+                @include size-weight(0.94rem, 300);
+            }
+        }
+
+        &__price {
+            align-content: end;
+            @include size-weight(0.94rem, 700);
+        }
+    }
+}

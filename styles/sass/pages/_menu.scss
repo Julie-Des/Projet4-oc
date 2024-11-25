@@ -1,36 +1,44 @@
 // Section cover
 .cover {
-    height: 45vh;
+    height: 33vh;
+
     &__image {
+        @include height-width(100%, 100%);
         object-fit: cover;
-        height: 100%;
-        width: 100%;
     }
 }
 
 // Section menu
 .menu {
     @include background-padding($light-grey, 35px 12px 40px 12px);
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    @include radius-top(40px);
     transform: translateY(-40px);
-    margin-bottom: -40px;
+    margin: 0 auto -40px;
 
     &__title {
         position: relative;
-    }
 
-    h1 {
-        @include fontshrikhand(1.75rem);
-        text-align: left;
-    }
+        h1 {
+            @include fontshrikhand(1.75rem);
+            text-align: left;
+            margin-bottom: 40px;
 
-    .fa-heart {
+            @media (min-width:767px) {
+            text-align: center;
+            }
+        }
+
+        .fa-heart {
         position: absolute;
-        top: 4%;
-        right: 8%;
-        transform: translateY(50%);
+        bottom: 0;
+        left: 87.5%;
+        transform: translateY(-50%);
         font-size: 21px;
+        }
+    }
+
+    &__link {
+        @include button(15px 50px);
+        display: inline-block;
     }
 }
-
