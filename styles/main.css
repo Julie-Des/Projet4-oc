@@ -623,13 +623,18 @@ footer ul li .fa-handshake-angle {
 }
 
 .cover {
-  height: 33vh;
+  height: 30vh;
 }
 .cover__image {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 767px) {
+  .cover {
+    height: 62vh;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -670,6 +675,11 @@ footer ul li .fa-handshake-angle {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   font-size: 21px;
+}
+@media (min-width: 767px) {
+  .menu__title .fa-heart {
+    left: 80%;
+  }
 }
 .menu__link {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);

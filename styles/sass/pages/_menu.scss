@@ -1,10 +1,14 @@
 // Section cover
 .cover {
-    height: 33vh;
+    height: 30vh;
 
     &__image {
         @include height-width(100%, 100%);
         object-fit: cover;
+    }
+
+    @include media-tablet {
+        height: 62vh;
     }
 }
 
@@ -42,6 +46,10 @@
         left: 87.5%;
         transform: translateY(-50%);
         font-size: 21px;
+
+        @include media-tablet {
+            left: 80%;
+        }
         }
     }
 
