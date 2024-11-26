@@ -31,6 +31,8 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #F6F6F6;
+  width: 100%;
   height: 100vh;
   z-index: 100;
   position: absolute;
@@ -62,8 +64,8 @@ main {
   width: 110px;
 }
 .loader__content div {
-  width: 20px;
   height: 20px;
+  width: 20px;
   background-color: #99E2D0;
   border-radius: 50%;
   -webkit-animation: grow-shrink 1.5s infinite;
@@ -150,6 +152,7 @@ main {
 @media (min-width: 1024px) {
   .functioning__list li {
     font-size: 1rem;
+    max-width: 500px;
   }
 }
 
@@ -161,14 +164,14 @@ main {
 .card img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  -o-object-fit: cover;
-     object-fit: cover;
   height: 175px;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 1024px) {
   .card img {
-    height: 130px;
+    height: 150px;
   }
 }
 .card span {
@@ -368,8 +371,12 @@ footer ul li .fa-handshake-angle {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 30px;
-    padding-right: 50px;
+    padding: 30px 50px 22px 25px;
+    gap: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  footer {
     gap: 70px;
   }
 }
@@ -460,7 +467,7 @@ footer ul li .fa-handshake-angle {
   top: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 4px);
 }
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .intro::before {
     display: none;
   }
@@ -542,6 +549,11 @@ footer ul li .fa-handshake-angle {
     padding: 60px 130px;
   }
 }
+@media (min-width: 1440px) {
+  .functioning {
+    padding: 60px 160px;
+  }
+}
 
 .restaurants {
   background-color: #F6F6F6;
@@ -589,6 +601,11 @@ footer ul li .fa-handshake-angle {
     width: 45%;
   }
 }
+@media (min-width: 1440px) {
+  .restaurants__card a {
+    max-width: 490px;
+  }
+}
 @media (min-width: 767px) {
   .restaurants {
     padding: 50px;
@@ -597,6 +614,11 @@ footer ul li .fa-handshake-angle {
 @media (min-width: 1024px) {
   .restaurants {
     padding: 60px 130px;
+  }
+}
+@media (min-width: 1440px) {
+  .restaurants {
+    padding: 60px 160px;
   }
 }
 
@@ -608,6 +630,13 @@ footer ul li .fa-handshake-angle {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  .menu-container {
+    max-width: 1055px;
+    margin: 0 auto;
+  }
 }
 
 .menu {
@@ -661,4 +690,10 @@ footer ul li .fa-handshake-angle {
           box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
   -webkit-transform: translateX(-0.5px);
           transform: translateX(-0.5px);
+}
+@media (min-width: 767px) {
+  .menu {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
 }/*# sourceMappingURL=main.css.map */

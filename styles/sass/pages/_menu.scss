@@ -9,6 +9,14 @@
 }
 
 // Section menu
+
+.menu-container {
+    @include media-desktop {
+        max-width: 1055px;
+        margin: 0 auto;
+    }
+}
+
 .menu {
     @include background-padding($light-grey, 35px 12px 40px 12px);
     @include radius-top(40px);
@@ -23,8 +31,8 @@
             text-align: left;
             margin-bottom: 40px;
 
-            @media (min-width:767px) {
-            text-align: center;
+            @include media-tablet {
+                text-align: center;
             }
         }
 
@@ -40,5 +48,10 @@
     &__link {
         @include button(15px 50px);
         display: inline-block;
+    }
+
+    @include media-tablet {
+        padding-left: 160px;
+        padding-right: 160px;
     }
 }

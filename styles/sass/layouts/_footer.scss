@@ -26,16 +26,19 @@ footer {
             }
         }
 
-        @media (min-width:767px) {
+        @include media-tablet {
             flex-direction: row;
         }
     }
 
-    @media (min-width:767px) {
+    @include media-tablet {
         flex-direction: row-reverse;
         align-items: center;
-        padding-top: 30px;
-        padding-right: 50px;
+        padding: 30px 50px 22px 25px;
+        gap: 30px;
+    }
+
+    @include media-desktop {
         gap: 70px;
     }
 }

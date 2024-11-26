@@ -9,8 +9,8 @@
     &::before {
         @include shadow-before(2px, $shadow-thin);
 
-        @media (min-width: 767px) {
-        display: none;
+        @include media-tablet {
+            display: none;
         }
     }
 
@@ -44,7 +44,7 @@
     &::before {
         @include shadow-before(4px, $shadow-thick);
 
-        @media screen and (min-width: 767px) {
+        @include media-tablet {
             display: none;
         }
     }
@@ -76,19 +76,23 @@
         @include childcenter;
         @include flex-column(25px);
 
-        @media (min-width:767px) {
+        @include media-tablet {
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-between;
-        
         }
     }
 
-    @media (min-width:767px) {
+    @include media-tablet {
         padding: 50px;
     }
-    @media (min-width:1024px) {
+
+    @include media-desktop {
         padding: 60px 130px;
+    }
+
+    @include media-desktop-large {
+        padding: 60px 160px;
     }
 }
 
@@ -105,26 +109,34 @@
        @include childcenter;
        @include flex-column(15px);
 
-       @media (min-width:767px) {
+       @include media-tablet {
             flex-direction: row;
             justify-content: space-between;
             gap: 30px;
        }
        
        a {
-        width: 100%;
+            width: 100%;
 
-        @media (min-width:767px) {
-            width: 45%;
+            @include media-tablet {
+                width: 45%;
+            }
+
+            @include media-desktop-large {
+                max-width: 490px;
+            }
         }
-       }
     }
 
-    @media (min-width:767px) {
+    @include media-tablet {
         padding: 50px;
     }
 
-    @media (min-width:1024px) {
+    @include media-desktop {
         padding: 60px 130px;
     }
+
+    @include media-desktop-large {
+        padding: 60px 160px;
+    }  
 }
