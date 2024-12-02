@@ -1,0 +1,35 @@
+.dishes {
+
+    &__check {
+        background-color: $ligth-green;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        width: 15%;
+        box-sizing: border-box;
+        height: 65px;
+        text-align: center;
+        align-content: center;
+        transform: translateX(100px);
+        transition: all 0.2s;
+        transform-origin: right;
+        
+        
+        .fa-check {
+            border-radius: 20px;
+            border: 1px solid $ligth-green;
+            @include background-padding($white, 3px);
+            color: $ligth-green; 
+        }
+    }
+
+    &:hover {
+        & > .dishes__check {
+            transform: translateX(0);
+        }   
+        
+        .content__price {
+            margin-right: 0;
+        }
+    }
+}
+

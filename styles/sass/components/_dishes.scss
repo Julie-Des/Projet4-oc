@@ -19,26 +19,50 @@
     }
 
     .dishes {
-        @include background-padding($white, 10px);
         display: flex;
-        justify-content: space-between;
+        justify-content:space-between;
+        align-items: center;
+        gap: 0;
+        height: 65px;
         border-radius: 15px;
+        background-color: $white;
+        cursor: pointer;
+        overflow: hidden;
 
         &__content {
-            @include flex-column(5px);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background-color: $white;
+            border-radius: 15px;
+            padding: 10px;
+
+            .content__text {
+                @include flex-column(5px);
         
-            h3 {
-                @include size-weight(1.125rem, 500);
+                h3 {
+                    @include size-weight(1.125rem, 500);
+                }
+
+                p {
+                    @include size-weight(0.94rem, 300);
+                }
             }
 
-            p {
-                @include size-weight(0.94rem, 300);
-            }
-        }
-
-        &__price {
-            align-content: end;
+        .content__price {
             @include size-weight(0.94rem, 700);
+            margin-right: -45px;
+
+            @include media-tablet {
+                margin-right: -70px;
+            }
+            @include media-desktop {
+                margin-right: -80px;
+            }
         }
     }
 }
+
+}
+
