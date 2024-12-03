@@ -231,8 +231,12 @@ main {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 12px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   margin-bottom: 40px;
   text-align: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .menu__dishes h2 {
   font-size: 1rem;
@@ -263,11 +267,13 @@ main {
   height: 65px;
   border-radius: 15px;
   background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
+          box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   cursor: pointer;
-  overflow: hidden;
 }
 .menu__dishes .dishes__content {
   width: 100%;
+  min-width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,6 +286,8 @@ main {
   background-color: #FFFFFF;
   border-radius: 15px;
   padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .menu__dishes .dishes__content .content__text {
   display: -webkit-box;
@@ -292,48 +300,43 @@ main {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 5px;
+  min-width: 110px;
 }
 .menu__dishes .dishes__content .content__text h3 {
   font-size: 1.125rem;
   font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
 }
 .menu__dishes .dishes__content .content__text p {
   font-size: 0.94rem;
   font-weight: 300;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
 }
 .menu__dishes .dishes__content .content__price {
   font-size: 0.94rem;
   font-weight: 700;
-  margin-right: -45px;
-}
-@media (min-width: 767px) {
-  .menu__dishes .dishes__content .content__price {
-    margin-right: -70px;
-  }
-}
-@media (min-width: 1024px) {
-  .menu__dishes .dishes__content .content__price {
-    margin-right: -80px;
-  }
+  -webkit-transform: translateX(55px);
+          transform: translateX(55px);
 }
 
 .dishes__check {
   background-color: #99E2D0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  width: 15%;
+  width: 59px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 65px;
   text-align: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-transform: translateX(100px);
-          transform: translateX(100px);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  -webkit-transform-origin: right;
-          transform-origin: right;
+  opacity: 0;
 }
 .dishes__check .fa-check {
   border-radius: 20px;
@@ -343,13 +346,104 @@ main {
   color: #99E2D0;
 }
 .dishes:hover > .dishes__check {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-animation: check-anim 0.8s forwards;
+          animation: check-anim 0.8s forwards;
 }
 .dishes:hover .content__price {
-  margin-right: 0;
+  -webkit-animation: price-anim 0.8s forwards;
+          animation: price-anim 0.8s forwards;
 }
 
+@-webkit-keyframes check-anim {
+  0% {
+    -webkit-transform: translateX(70px);
+            transform: translateX(70px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes check-anim {
+  0% {
+    -webkit-transform: translateX(70px);
+            transform: translateX(70px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes price-anim {
+  0% {
+    -webkit-transform: translateX(55px);
+            transform: translateX(55px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes price-anim {
+  0% {
+    -webkit-transform: translateX(55px);
+            transform: translateX(55px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+.menu__dishes {
+  -webkit-animation: appear 1s forwards;
+          animation: appear 1s forwards;
+  opacity: 0;
+}
+.menu__dishes:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.menu__dishes:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.menu__dishes:nth-child(3) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 header {
   position: relative;
 }

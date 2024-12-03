@@ -4,15 +4,12 @@
         background-color: $ligth-green;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
-        width: 15%;
+        width: 59px;
         box-sizing: border-box;
         height: 65px;
         text-align: center;
         align-content: center;
-        transform: translateX(100px);
-        transition: all 0.2s;
-        transform-origin: right;
-        
+        opacity: 0;
         
         .fa-check {
             border-radius: 20px;
@@ -24,12 +21,33 @@
 
     &:hover {
         & > .dishes__check {
-            transform: translateX(0);
+            animation: check-anim 0.8s forwards;
         }   
         
         .content__price {
-            margin-right: 0;
+            animation: price-anim 0.8s forwards;
         }
     }
 }
 
+@keyframes check-anim {
+    0% {
+        transform: translateX(70px);
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes price-anim {
+    0% {
+        transform: translateX(55px)
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
