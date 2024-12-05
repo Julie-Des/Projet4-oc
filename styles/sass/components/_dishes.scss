@@ -1,7 +1,9 @@
 .menu__dishes {
     @include flex-column(12px);
+    flex-wrap: nowrap;
     margin-bottom: 40px;
     text-align: left;
+    box-sizing: border-box;
 
     h2 {
         @include size-weight(1rem, 300);
@@ -19,26 +21,51 @@
     }
 
     .dishes {
-        @include background-padding($white, 10px);
         display: flex;
-        justify-content: space-between;
+        justify-content:space-between;
+        align-items: center;
+        gap: 0;
+        height: 65px;
         border-radius: 15px;
+        background-color: $white;
+        box-shadow: $shadow-dishes;
+        cursor: pointer;
 
         &__content {
-            @include flex-column(5px);
+            width: 100%;
+            min-width: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background-color: $white;
+            border-radius: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+
+            .content__text {
+                @include flex-column(5px);
+                min-width: 80px;
         
-            h3 {
-                @include size-weight(1.125rem, 500);
+                h3 {
+                    @include size-weight(1.125rem, 500);
+                    @include text-overflow;
+                }
+
+                p {
+                    @include size-weight(0.94rem, 300);
+                    @include text-overflow;
+                }
             }
 
-            p {
-                @include size-weight(0.94rem, 300);
-            }
-        }
+            .content__price {
+                @include size-weight(0.94rem, 700);
+                transform: translateX(55px);
 
-        &__price {
-            align-content: end;
-            @include size-weight(0.94rem, 700);
+                @include media-very-small {
+                    transform: translateX(50px);
+                }
+            }
         }
     }
 }
+

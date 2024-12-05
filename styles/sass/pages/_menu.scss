@@ -35,21 +35,34 @@
             text-align: left;
             margin-bottom: 40px;
 
+            @include media-very-small {
+                font-size: 1.22rem;
+            }
+
             @include media-tablet {
                 text-align: center;
             }
         }
 
         .fa-heart {
-        position: absolute;
-        bottom: 0;
-        left: 87.5%;
-        transform: translateY(-50%);
-        font-size: 21px;
+            position: absolute;
+            bottom: 0;
+            left: 87.5%;
+            transform: translateY(-50%);
+            font-size: 1.313rem;
 
-        @include media-tablet {
-            left: 80%;
-        }
+            @include media-very-small {
+                font-size: 1rem;
+                left: 95%;
+            }
+
+            @include media-tablet {
+                left: 85%;
+            }
+
+            @include media-desktop {
+                left: 75%;
+            }
         }
     }
 

@@ -1,0 +1,53 @@
+.dishes {
+
+    &__check {
+        background-color: $ligth-green;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        width: 59px;
+        box-sizing: border-box;
+        height: 65px;
+        text-align: center;
+        align-content: center;
+        opacity: 0;
+        
+        .fa-check {
+            border-radius: 20px;
+            border: 1px solid $ligth-green;
+            @include background-padding($white, 3px);
+            color: $ligth-green; 
+        }
+    }
+
+    &:hover {
+        & > .dishes__check {
+            animation: check-anim 0.8s forwards;
+        }   
+        
+        .content__price {
+            animation: price-anim 0.8s forwards;
+        }
+    }
+}
+
+@keyframes check-anim {
+    0% {
+        transform: translateX(70px);
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes price-anim {
+    0% {
+        transform: translateX(55px)
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
