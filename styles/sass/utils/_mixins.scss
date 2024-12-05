@@ -61,6 +61,10 @@
 }
 
 // Responsive :
+@mixin media-very-small {
+    @media (max-width:330px) {@content;}
+}
+
 @mixin media-tablet {
     @media (min-width:767px) {@content;}
 }

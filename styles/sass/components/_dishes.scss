@@ -33,7 +33,7 @@
 
         &__content {
             width: 100%;
-            min-width: 100px;
+            min-width: 80px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -44,7 +44,7 @@
 
             .content__text {
                 @include flex-column(5px);
-                min-width: 110px;
+                min-width: 80px;
         
                 h3 {
                     @include size-weight(1.125rem, 500);
@@ -60,6 +60,10 @@
             .content__price {
                 @include size-weight(0.94rem, 700);
                 transform: translateX(55px);
+
+                @include media-very-small {
+                    transform: translateX(50px);
+                }
             }
         }
     }
