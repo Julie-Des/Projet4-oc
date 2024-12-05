@@ -36,11 +36,7 @@
         }  
 
         .fa-heart {
-            position: absolute;
-            bottom: 50%;
-            right: 5%;
-            transform: translateY(50%);
-            font-size: 21px;
+            @include heart(50%, 88%, 50%);
         }
     }
 }

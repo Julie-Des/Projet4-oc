@@ -17,6 +17,14 @@
     background: $background;
 }
 
+@mixin heart($bottom, $left, $translateY) {
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+    transform: translateY($translateY);
+    font-size: 1.313rem;
+}
+
 @mixin fontshrikhand($size) {
     font-family: $font-title;
     font-size: $size;
@@ -35,6 +43,12 @@
     gap: $gap;
 }
 
+@mixin flex-space-between($align-items) {
+    display: flex;
+    justify-content:space-between;
+    align-items: $align-items;
+}
+
 @mixin grid-column($gtc, $gap) {
     display: grid;
     grid-template-columns: $gtc;
@@ -46,6 +60,11 @@
 @mixin radius-top($radius) {
     border-top-left-radius: $radius;
     border-top-right-radius: $radius;
+}
+
+@mixin radius-right {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 @mixin height-width($height, $width) {

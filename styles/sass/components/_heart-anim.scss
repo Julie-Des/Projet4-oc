@@ -4,9 +4,9 @@
     color: transparent;
     opacity: 0;
     z-index: 10;
+    transition: 0.3s ease-in-out;
 
     &:hover {
         opacity: 1;
-        transition: 0.3s;
     }
 }

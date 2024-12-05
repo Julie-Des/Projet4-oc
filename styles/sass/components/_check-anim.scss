@@ -1,20 +1,18 @@
 .dishes {
 
     &__check {
+        @include height-width(65px, 59px);
+        @include radius-right;
         background-color: $ligth-green;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        width: 59px;
         box-sizing: border-box;
-        height: 65px;
         text-align: center;
         align-content: center;
         opacity: 0;
         
         .fa-check {
+            @include background-padding($white, 3px);
             border-radius: 20px;
             border: 1px solid $ligth-green;
-            @include background-padding($white, 3px);
             color: $ligth-green; 
         }
     }

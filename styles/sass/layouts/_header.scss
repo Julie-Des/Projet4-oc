@@ -1,5 +1,6 @@
 header {
     position: relative;
+    
     span {
         @include size-weight(1.45rem, 900);
         position: absolute;

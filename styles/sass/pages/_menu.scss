@@ -45,11 +45,7 @@
         }
 
         .fa-heart {
-            position: absolute;
-            bottom: 0;
-            left: 87.5%;
-            transform: translateY(-50%);
-            font-size: 1.313rem;
+            @include heart(0, 87.5%, -50%);
 
             @include media-very-small {
                 font-size: 1rem;
