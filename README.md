@@ -44,7 +44,7 @@ Several animations were created to make the user interface more dynamic and inte
 
 ---
 
-📦 **Getting Started**
+## 📦 Getting Started
 
 ### Prerequisites
 
