@@ -52,10 +52,16 @@ A modern web browser (Chrome, Firefox, Safari, etc.)
 
 ### Installation
 
-Clone the repository:
+1. Clone the repository:
 
     ```bash
     git clone https://github.com/Julie-Des/Projet4-oc
+    ```
+
+2.  Navigate to the project directory:
+
+    ```bash
+    cd Projet4-oc
     ```
 
 ### Running Locally
